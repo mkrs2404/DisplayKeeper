@@ -1,0 +1,8 @@
+.build/
+dist/
+# Local investigations, diagnostic snapshots, and development dependencies.
+research/
+tools/
+.DS_Store
+.swiftpm/
+*.log
