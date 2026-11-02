@@ -6,11 +6,19 @@
 
 A native macOS menu-bar app that remembers your monitor's color format and restores it when macOS changes it.
 
-Built for external monitors that come back washed out after a restart, wake, or reconnect because their color encoding, range, or bit depth changed. Choose a working format once and enable protection for that display.
+Choose a working format once and enable protection for that display.
 
 <p align="center">
   <img src="docs/images/menu-bar.svg" width="380" alt="Menu-bar controls showing two protected monitors, their current color formats, and check and pause actions">
 </p>
+
+## Why I built it
+
+After upgrading from macOS 26 to 27, my BenQ EX2780Q and GW2790Q started coming back washed out after restarts. The Mac, cables, and monitor settings were unchanged. Logs from the original workaround repeatedly captured the connections reverting to **limited-range YCbCr**; restoring their known-good **full-range RGB** formats brought the picture back.
+
+Those logged corrections kept the same resolution, refresh rate, bit depth, and SDR state. The change was in color encoding and range. A [range mismatch can make the image look faded](https://betterdisplay.pro/guide/tutorials/fix-output-range-and-color-mode/), although correctly interpreted limited-range output is valid. The exact change inside macOS 27 that triggered this on my setup remains unconfirmed.
+
+The first workaround was a script that checked every ten seconds, leaving a delay before correction and a visible monitor resync. DisplayKeeper replaces that polling loop with a native app that reacts to display events, remembers the working format, and shows whether it is still active. A correction can still briefly blank the monitor.
 
 ## What it does
 
