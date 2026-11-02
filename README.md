@@ -9,7 +9,7 @@ A native macOS menu-bar app that remembers your monitor's color format and resto
 Built for external monitors that come back washed out after a restart, wake, or reconnect because their color encoding, range, or bit depth changed. Choose a working format once and enable protection for that display.
 
 <p align="center">
-  <img src="docs/images/menu-bar.jpg" width="380" alt="Menu-bar controls showing two protected monitors, their current color formats, and check and pause actions">
+  <img src="docs/images/menu-bar.svg" width="380" alt="Menu-bar controls showing two protected monitors, their current color formats, and check and pause actions">
 </p>
 
 ## What it does
@@ -20,7 +20,7 @@ Built for external monitors that come back washed out after a restart, wake, or 
 - **Recoverable changes:** try a mode for 15 seconds. Keep it or let the previous settings return.
 - **Menu-bar status:** check now, pause/resume, per-monitor protection, and open at login. No persistent Dock icon.
 
-<img src="docs/images/controls.jpg" width="1020" alt="Display controls with a recommended 120 Hz, 10-bit RGB setup and current protection status">
+<img src="docs/images/controls.svg" width="1020" alt="Display controls with a recommended 120 Hz, 10-bit RGB setup and current protection status">
 
 ## Build and install
 
